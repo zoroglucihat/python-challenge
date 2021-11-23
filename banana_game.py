@@ -1,21 +1,21 @@
 def banana_game(string):
 
-    stuart = 0
-    kevin = 0
+    david = 0
+    roger = 0
     strlen = len(string)
 
     for i in range(strlen):
         for vowc in "AEIOU":
             if string[i].find(vowc) >= 0:
-                kevin = kevin + strlen - i
+                roger = roger + strlen - i
 
-    stuart = int(strlen*(strlen+1)/2) - kevin
+    david = int(strlen*(strlen+1)/2) - roger
 
-    if stuart > kevin:
-        print("Stuart " + str(stuart))
-    if kevin > stuart:
-        print("Kevin " + str(kevin))
-    if kevin == stuart:
+    if david > roger:
+        print("david " + str(david))
+    if roger > david:
+        print("roger " + str(roger))
+    if roger == david:
         print("Draw")
 
     return 0
@@ -25,3 +25,4 @@ def banana_game(string):
 if __name__ == '__main__':
     s = raw_input()
     banana_game(s)
+
